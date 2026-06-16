@@ -2,11 +2,12 @@
 
 ## Context
 Het vastleggen van de rol van een uitvoerende in schema.org.
-Dit voorbeeld bevat twee verschillende methodieken:
-- bij sommige classes zoals PerformingartsEvent bestaat de "director" property en kan die "rol" zonder schema:Role class gemodelleerd worden.
-- bij andere classes zoals PerformanceWork bestaan die niet en moet het via de meer generieke contributor property en wel met de Role class. 
 
-Note: de additionalTypes hieronder zijn uitgeschreven maar dat moeten termen uit een (theater)thesaurus worden.
+Er is een keuze gemaakt om alle rollen - waar specificatie nodig is - vast te leggen via de schema:Role of PerformanceRole class. 
+Zowel bij de Productie als de uitvoering; dus van een PerformingArtsEvent wordt niet rechtstreeks de property "director" gebruikt, omdat je dat vaak voor een productie-seizoen (PerformanceWork/CreativeWork) wilt vastleggen, wat die director property niet heeft.  
+Dus zie onderstaand voorbeeld voor die modellering.
+
+Note: de additionalTypes en de rollen hieronder zijn uitgeschreven maar dat moeten termen uit een (theater)thesaurus worden.
 
 ## Voorbeeld
 ```mermaid
@@ -63,16 +64,21 @@ classDiagram
         <<Role>>
         - roleName dramaturg
     }
+    class BackstageRole2["director"] {
+        <<Role>>
+        - roleName director
+    }
 
 	PerformanceWork --> PerformanceRole: performer
-	PerformanceRole --> Persoon: performer
     PerformanceWork --> BackstageRole: contributor
+    PerformanceWork --> BackstageRole2: contributor
 	PerformanceWork --> Producent: creator
+	PerformanceRole --> Persoon: performer
+	PerformanceRole2 --> Persoon2: performer
     PerformingArtsEvent --> PerformanceWork: workPerformed
 	PerformingArtsEvent --> PerformanceRole2: performer
-	PerformingArtsEvent --> Persoon3: director
-	PerformanceRole2 --> Persoon2: performer
 	BackstageRole --> Persoon4: contributor
+	BackstageRole2 --> Persoon3: contributor
 
 	
 
