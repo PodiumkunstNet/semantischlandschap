@@ -55,11 +55,9 @@ classDiagram
 	class Productieprogrammauitvoering["Animal Farm 2022-2023"] {
 		<<Productieprogrammauitvoering>>		
 		- has type: Expression
-		- has category of expression: Operauitvoering
-		- has category of expression: Première
-		- has title of expression: Animal Farm
-		- datum: 3 maart 2023
-		- locatie: Nationale Opera & Ballet, Amsterdam
+		- has category of expression: Productieseizoen
+		- has title of expression: Animal Farm 2022-2023
+		- timespan: 2022-2023
 	}
 	class Uitvoering["Animal Farm"] {
 		<<Uitvoering>>		
