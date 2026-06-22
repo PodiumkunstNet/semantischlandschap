@@ -1,5 +1,7 @@
 # Patroon: Uitvoeringsrol
 
+Dit complexere patroon toont hoe de rollen van uitvoerenden (acteurs, etc.) gemodelleerd kunnen worden, zowel voor een gehele tournee (productieprogramma-uitvoering) als voor een specifieke voorstelling. Het voorbeeld illustreert hoe Francis van Broekhuizen de vaste actrice voor de rol 'Mrs. Jones' is, terwijl bij de première een andere actrice (een 'stand-in') deze rol speelde. Dit patroon maakt het mogelijk om een complete productie met alle betrokkenen, inclusief invallers en specifieke wijzigingen per voorstelling, gedetailleerd vast te leggen.
+
 ## Context
 Je wilt vastleggen welke rol een uitvoerende heeft bij een bepaalde uitvoering. 
 
