@@ -1,4 +1,7 @@
 # Patroon: Bezoeker
+
+Dit eenvoudige patroon modelleert hoe de aanwezigheid van een specifieke bezoeker bij een uitvoering wordt vastgelegd. Als voorbeeld wordt de (hypothetische) rol 'toeschouwer' van Koning Willem-Alexander bij de première van _Animal Farm_ getoond. 
+
 ## Context
 Je wilt de aanwezigheid vastleggen van een specifieke bezoeker bij een bepaalde uitvoering. 
 ## Structuur
